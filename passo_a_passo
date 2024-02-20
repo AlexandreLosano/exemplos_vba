@@ -1,0 +1,23 @@
+     Salvar = Planilha.Range("D7").Text
+
+     ActiveSheet.ExportAsFixedFormat Type:=xlTypePDF, Filename:= _
+     "C:\TNT-Express\" + Salvar + ".pdf", Quality:=xlQualityStandard, _
+     IncludeDocProperties:=True, IgnorePrintAreas:=False, OpenAfterPublish:= _
+     True
+
+     Sheets("Resumo").Active
+     Sheets("Resumo").Range("A1:B41").Select
+
+
+
+     'Verificar com chat se a sintax esta correta
+     'Pergurtae +/- assim "Preciso que a var salvar tenha a seguinte informação texto fixo concatenado com a data na celula XXX mantendo o formarta de data" 
+     Salvar = "Relatório Norturno - " +  Sheets("Resumo").Range("B1").Text 
+
+     ActiveSheet.ExportAsFixedFormat Type:=xlTypePDF, Filename:= _
+     "Caminho Share Point" + Salvar + ".pdf", Quality:=xlQualityStandard, _
+     IncludeDocProperties:=True, IgnorePrintAreas:=False, OpenAfterPublish:= _
+     True
+     
+     'codigo teoricamente final, linhas 13 até 20
+     
